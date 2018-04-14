@@ -5,6 +5,10 @@
 
 // CHAMPIONSHIP PARTICIPANTS SHOULD NOT EDIT THIS FILE
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 // 64 bytes
 #define CACHE_LINE_SIZE 64
 // 4 KB
@@ -98,3 +102,7 @@ void l2_cache_fill(int cpu_num, unsigned long long int addr, int set, int way, i
 void l2_prefetcher_heartbeat_stats(int cpu_num);
 void l2_prefetcher_warmup_stats(int cpu_num);
 void l2_prefetcher_final_stats(int cpu_num);
+
+#ifdef __cplusplus
+}
+#endif
